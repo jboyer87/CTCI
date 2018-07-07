@@ -1,0 +1,4 @@
+{
+	"dotnet-test-explorer.testProjectPath": "CTCI.UnitTests",
+	"dotnet-test-explorer.autoWatch": true
+}
