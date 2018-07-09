@@ -11,19 +11,25 @@ namespace CTCI.UnitTests
 		public void Question01Should()
 		{
 			// a, a
-			Assert.Equal(Question01.HasUniqueCharacters("aa"), false);
+			Assert.False(Question01.HasUniqueCharacters("aa"));
 
 			// Several letters are the same
-			Assert.Equal(Question01.HasUniqueCharacters("This is just a word string"), false);
+			Assert.False(Question01.HasUniqueCharacters("This is just a word string"));
 
 			// a and A are different characters
-			Assert.Equal(Question01.HasUniqueCharacters("aA"), true);
+			Assert.True(Question01.HasUniqueCharacters("aA"));
 
 			// all unique
-			Assert.Equal(Question01.HasUniqueCharacters("abcdefg"), true);
+			Assert.True(Question01.HasUniqueCharacters("abcdefg"));
 
 			// spaces are not distinct
-			Assert.Equal(Question01.HasUniqueCharacters("  "), false);
+			Assert.False(Question01.HasUniqueCharacters("  "));
+		}
+
+		[Fact]
+		public void Question02Should()
+		{
+			Assert.Equal("dcba", Question02.Reverse("abcd"));
 		}
 	}
 }
