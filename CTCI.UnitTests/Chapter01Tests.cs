@@ -50,5 +50,34 @@ namespace CTCI.UnitTests
 		{
 			Assert.Equal("dcba", Question02.Reverse("abcd"));
 		}
+
+		[Fact]
+		public void Question03Should()
+		{
+			string test1 = "abcd";
+			Question03.RemoveDuplicateCharacters(ref test1);
+
+			string test2 = "abcdd";
+			Question03.RemoveDuplicateCharacters(ref test2);
+
+			string test3 = "abc d ";
+			Question03.RemoveDuplicateCharacters(ref test3);
+
+			string test4 = null;
+			Question03.RemoveDuplicateCharacters(ref test4);
+
+			string test5 = "aaaa";
+			Question03.RemoveDuplicateCharacters(ref test5);
+
+			string test6 = "ababab";
+			Question03.RemoveDuplicateCharacters(ref test6);
+
+			Assert.Equal("abcd", test1);
+			Assert.Equal("abcd", test2);
+			Assert.Equal("abc d", test3);
+			Assert.Equal(null, test4);
+			Assert.Equal("a", test5);
+			Assert.Equal("ab", test6);
+		}
 	}
 }
