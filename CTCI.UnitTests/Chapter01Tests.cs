@@ -82,5 +82,24 @@ namespace CTCI.UnitTests
 			Assert.Equal("a", test5);
 			Assert.Equal("ab", test6);
 		}
+
+		[Fact]
+		public void Question04Should()
+		{
+			Assert.True(Question04.AreAnagrams("aabbccdd", "abbacddc"));
+			Assert.True(Question04.AreAnagrams("abcd", "dcba"));
+			Assert.False(Question04.AreAnagrams("aabbccdd", "dcba"));
+			Assert.False(Question04.AreAnagrams(null, null));
+			Assert.False(Question04.AreAnagrams(null, "abcd"));
+			Assert.False(Question04.AreAnagrams("abcd", null));
+			Assert.True(Question04.AreAnagrams("a man a plan a canal panama", "a plan a man a canal panama"));
+			Assert.False(Question04.AreAnagrams("A man a plan a canal panama", "a plan a man a canal panama"));
+			Assert.False(Question04.AreAnagrams("wxyz", "abcd"));
+
+			Assert.True(Question04.AreAnagrams2("aabbccdd", "abbacddc"));
+			Assert.False(Question04.AreAnagrams2(null, null));
+			Assert.False(Question04.AreAnagrams2(null, "abcd"));
+			Assert.False(Question04.AreAnagrams2("abcd", null));
+		}
 	}
 }
