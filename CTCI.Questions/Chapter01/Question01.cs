@@ -17,6 +17,11 @@ namespace CTCI.Questions.Chapter01
 		// Time complexity is O(n), space complexity is O(n)
 		public static bool HasUniqueCharacters(string s)
 		{
+			if (s == null)
+			{
+				return true;
+			}
+
 			HashSet<char> characterSet = new HashSet<char>();
 
 			foreach (char c in s)
@@ -51,6 +56,11 @@ namespace CTCI.Questions.Chapter01
 		// Time complexity is O(n), space complexity is O(n)
 		public static bool HasUniqueCharacters2(string s)
 		{
+			if (s == null)
+			{
+				return true;
+			}
+
 			bool[] characterSet = new bool[256];
 
 			foreach (char c in s)

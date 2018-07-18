@@ -26,6 +26,9 @@ namespace CTCI.UnitTests
 			Assert.False(Question01.HasUniqueCharacters("  "));
 			Assert.False(Question01.HasUniqueCharacters2("  "));
 
+			Assert.True(Question01.HasUniqueCharacters(null));
+			Assert.True(Question01.HasUniqueCharacters2(null));
+
 			// Add all ascii characters to a string to check
 			string allAsciiCharacters = "";
 
