@@ -101,5 +101,59 @@ namespace CTCI.UnitTests
 			Assert.False(Question04.AreAnagrams2(null, "abcd"));
 			Assert.False(Question04.AreAnagrams2("abcd", null));
 		}
+
+		[Fact]
+		public void Question05Should()
+		{
+			Assert.Equal("this%20is%20now%20encoded!", Question05.EncodeSpaces("this is now encoded!"));
+			Assert.Equal(null, Question05.EncodeSpaces(null));
+			Assert.Equal("%20%20%20%20%20", Question05.EncodeSpaces("     "));
+		}
+
+		[Fact]
+		public void Question07Should()
+		{
+			Matrix matrix = new Matrix(4, 4);
+
+			// Set a few values to 0
+			matrix.Data[0, 0] = 0;
+
+			matrix.Data[3, 1] = 0;
+
+			// Zeroes added:
+			//    0  1  2  3
+			// 0 [0, X, X, X]
+			// 1 [X, X, X, X]
+			// 2 [X, X, X, X]
+			// 3 [X, 0, X, X]
+
+			matrix.Print();
+
+			matrix.SetToZero();
+
+			// Expect to see:
+			//    0  1  2  3
+			// 0 [0, 0, 0, 0]
+			// 1 [0, 0, X, X]
+			// 2 [0, 0, X, X]
+			// 3 [0, 0, 0, 0]
+
+			System.Console.WriteLine();
+
+			matrix.Print();
+
+			Assert.Equal(0, matrix.Data[0, 0]);
+			Assert.Equal(0, matrix.Data[0, 1]);
+			Assert.Equal(0, matrix.Data[0, 2]);
+			Assert.Equal(0, matrix.Data[0, 3]);
+			Assert.Equal(0, matrix.Data[1, 0]);
+			Assert.Equal(0, matrix.Data[1, 1]);
+			Assert.Equal(0, matrix.Data[2, 0]);
+			Assert.Equal(0, matrix.Data[2, 1]);
+			Assert.Equal(0, matrix.Data[3, 0]);
+			Assert.Equal(0, matrix.Data[3, 1]);
+			Assert.Equal(0, matrix.Data[3, 2]);
+			Assert.Equal(0, matrix.Data[3, 3]);
+		}
 	}
 }
