@@ -155,5 +155,18 @@ namespace CTCI.UnitTests
 			Assert.Equal(0, matrix.Data[3, 2]);
 			Assert.Equal(0, matrix.Data[3, 3]);
 		}
+
+		[Fact]
+		public void Question08Should()
+		{
+			string nullTest = null;
+
+			Assert.True("pplea".IsRotationOf("apple"));
+			Assert.True("erbottlewat".IsRotationOf("waterbottle"));
+			Assert.False("pplea".IsRotationOf("paple"));
+			Assert.False(nullTest.IsRotationOf(null));
+			Assert.False("something".IsRotationOf(null));
+			Assert.False(nullTest.IsRotationOf("something"));
+		}
 	}
 }
