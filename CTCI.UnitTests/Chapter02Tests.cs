@@ -10,7 +10,7 @@ namespace CTCI.UnitTests
 		[Fact]
 		public void Question01Should()
 		{
-			var linkedList = new DataStructures.LinkedList<int>();
+			var linkedList = new LinkedList<int>();
 
 			linkedList.AppendToTail(1);
 			linkedList.AppendToTail(2);
@@ -20,7 +20,7 @@ namespace CTCI.UnitTests
 
 			Question01<int>.RemoveDuplicates(linkedList);
 
-			var expected = new DataStructures.LinkedList<int>();
+			var expected = new LinkedList<int>();
 
 			expected.AppendToTail(1);
 			expected.AppendToTail(2);
