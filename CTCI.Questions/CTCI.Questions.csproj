@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CTCI.DataStructures\CTCI.DataStructures.csproj" />
+  </ItemGroup>
+
 </Project>
