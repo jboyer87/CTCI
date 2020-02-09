@@ -19,11 +19,9 @@ namespace CTCI.Questions.Chapter02
 
 			Node<T> iterator = linkedList.Head;
 
-			Node<T> previous = null;
-
-			while(iterator.Next != null)
+			while (iterator.Next != null)
 			{
-				previous = iterator;
+				Node<T> previous = iterator;
 				iterator = iterator.Next;
 
 				if(seen.ContainsKey(iterator.Value))
