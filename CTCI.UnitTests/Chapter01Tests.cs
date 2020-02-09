@@ -78,7 +78,7 @@ namespace CTCI.UnitTests
 			Assert.Equal("abcd", test1);
 			Assert.Equal("abcd", test2);
 			Assert.Equal("abc d", test3);
-			Assert.Equal(null, test4);
+			Assert.Null(test4);
 			Assert.Equal("a", test5);
 			Assert.Equal("ab", test6);
 		}
@@ -106,14 +106,14 @@ namespace CTCI.UnitTests
 		public void Question05Should()
 		{
 			Assert.Equal("this%20is%20now%20encoded!", Question05.EncodeSpaces("this is now encoded!"));
-			Assert.Equal(null, Question05.EncodeSpaces(null));
+			Assert.Null(Question05.EncodeSpaces(null));
 			Assert.Equal("%20%20%20%20%20", Question05.EncodeSpaces("     "));
 		}
 
 		[Fact]
 		public void Question07Should()
 		{
-			Matrix matrix = new Matrix(4, 4);
+			var matrix = new Matrix(4, 4);
 
 			// Set a few values to 0
 			matrix.Data[0, 0] = 0;

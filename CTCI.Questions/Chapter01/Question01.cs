@@ -22,7 +22,7 @@ namespace CTCI.Questions.Chapter01
 				return true;
 			}
 
-			HashSet<char> characterSet = new HashSet<char>();
+			var characterSet = new HashSet<char>();
 
 			foreach (char c in s)
 			{

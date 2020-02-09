@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CTCI.DataStructures
+﻿namespace CTCI.DataStructures
 {
 	public class Node<T>
 	{

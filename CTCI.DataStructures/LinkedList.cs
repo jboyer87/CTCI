@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CTCI.DataStructures
+﻿namespace CTCI.DataStructures
 {
 	public class LinkedList<T>
 	{
