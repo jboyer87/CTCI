@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CTCI.DataStructures\CTCI.DataStructures.csproj" />
     <ProjectReference Include="..\CTCI.Questions\CTCI.Questions.csproj" />
   </ItemGroup>
 

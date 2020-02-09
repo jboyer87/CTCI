@@ -21,9 +21,9 @@
 			{
 				Node<T> iterator = Head;
 
-				while (Head.Next != null)
+				while (iterator.Next != null)
 				{
-					iterator = Head.Next;
+					iterator = iterator.Next;
 				}
 
 				iterator.Next = node;
