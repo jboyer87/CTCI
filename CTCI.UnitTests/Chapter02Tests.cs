@@ -1,7 +1,7 @@
-﻿using CTCI.DataStructures;
-using CTCI.Questions.Chapter02;
-
+﻿using System;
 using Xunit;
+using CTCI.DataStructures;
+using CTCI.Questions.Chapter02;
 
 namespace CTCI.UnitTests
 {
@@ -37,6 +37,40 @@ namespace CTCI.UnitTests
 			Assert.Equal(expectedFirst, actualFirst);
 			Assert.Equal(expectedSecond, actualSecond);
 			Assert.Equal(expectedThird, actualThird);
+		}
+
+		[Fact]
+		public void Question02Should()
+		{
+			var linkedList = new LinkedList<int>();
+			
+			linkedList.AppendToTail(1);
+			linkedList.AppendToTail(2);
+			linkedList.AppendToTail(3);
+			linkedList.AppendToTail(4);
+			linkedList.AppendToTail(5);
+
+			Node<int> expected = linkedList.Head.Next.Next.Next; // 4
+
+			Node<int> actual = Question02<int>.GetNthToLastElement(linkedList, 2);
+
+			Assert.Equal(expected, actual);
+		}
+
+		[Fact]
+		public void Question02ShouldThrowArgumentException()
+		{
+			var linkedList = new LinkedList<int>();
+
+			linkedList.AppendToTail(1);
+			linkedList.AppendToTail(2);
+			linkedList.AppendToTail(3);
+			linkedList.AppendToTail(4);
+			linkedList.AppendToTail(5);
+
+			Assert.Throws<ArgumentException>(
+				() => (Question02<int>.GetNthToLastElement(linkedList, 6))
+			);
 		}
 	}
 }
