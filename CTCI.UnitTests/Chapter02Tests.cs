@@ -104,5 +104,39 @@ namespace CTCI.UnitTests
 				() => (Question02<int>.GetNthToLastElement(linkedList, 6))
 			);
 		}
+
+		[Fact]
+		public void Question03Should()
+		{
+			var actual = new LinkedList<int>();
+
+			actual.AppendToTail(1);
+			actual.AppendToTail(2);
+			actual.AppendToTail(3);
+			actual.AppendToTail(4);
+			actual.AppendToTail(5);
+
+			var middleNode = actual.Head.Next.Next; // 3
+
+			Question03<int>.RemoveNodeFromList(ref middleNode);
+
+			var expected = new LinkedList<int>();
+
+			expected.AppendToTail(1);
+			expected.AppendToTail(2);
+			expected.AppendToTail(4);
+			expected.AppendToTail(5);
+
+			Node<int> actualRunner = actual.Head;
+			Node<int> expectedRunner = expected.Head;
+
+			// Check each value in the lists against each other
+			while (actualRunner != null)
+			{
+				Assert.Equal(expectedRunner.Value, actualRunner.Value);
+				actualRunner = actualRunner.Next;
+				expectedRunner = expectedRunner.Next;
+			}
+		}
 	}
 }
