@@ -17,4 +17,5 @@
 
 1. [Question 01](CTCI.Questions/Chapter02/Question01.cs) - Write code to remove duplicates from an unsorted linked list. How would you solve this problem if a temporary buffer is not allowed?
 1. [Question 02](CTCI.Questions/Chapter02/Question02.cs) - Implement an algorithm to find the nth to last element of singly-linked list.
-1. [Question 03](CTCI.Questions/Chapter02/Question03.cs) - Implement an algorithm to delete a node in teh middle of a singly-linked list, given only access to that node.
+1. [Question 03](CTCI.Questions/Chapter02/Question03.cs) - Implement an algorithm to delete a node in the middle of a singly-linked list, given only access to that node.
+1. [Question 04](CTCI.Questions/Chapter02/Question04.cs) - You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
