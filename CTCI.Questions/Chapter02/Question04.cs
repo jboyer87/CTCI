@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CTCI.DataStructures;
 
 namespace CTCI.Questions.Chapter02
 {
@@ -19,8 +20,63 @@ namespace CTCI.Questions.Chapter02
 			DataStructures.LinkedList<int> first, 
 			DataStructures.LinkedList<int> second)
 		{
-			// Placeholder
-			return new DataStructures.LinkedList<int>();
+			if(first.Head == null && second.Head == null)
+			{
+				return null;
+			}
+
+			var summedLists = new DataStructures.LinkedList<int>();
+			var summedRunner = new DataStructures.Node<int>(0);
+
+			summedLists.Head = summedRunner;
+
+			DataStructures.Node<int> firstRunner = first.Head;
+			DataStructures.Node<int> secondRunner = second.Head;
+			
+			bool carry = false;
+
+			while (firstRunner != null || secondRunner != null)
+			{
+				var newNode = new DataStructures.Node<int>(0);
+
+				int sum = 0;
+
+				if(carry)
+				{
+					sum++;
+				}
+
+				if(firstRunner == null)
+				{
+					sum += secondRunner.Value;
+				}
+				else if(secondRunner == null)
+				{
+					sum += firstRunner.Value;
+				}
+				else
+				{
+					sum += firstRunner.Value + secondRunner.Value;
+				}
+
+				carry = false;
+
+				if(sum >= 10)
+				{
+					sum -= 10;
+					carry = true;
+				}
+
+				summedRunner.Value = sum;
+
+				summedRunner.Next = newNode;
+				summedRunner = summedRunner.Next;
+
+				firstRunner = firstRunner == null ? null : firstRunner.Next ?? null;
+				secondRunner = secondRunner == null ? null : secondRunner.Next ?? null;
+			}
+
+			return summedLists;
 		}
 	}
 }

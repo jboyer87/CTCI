@@ -138,5 +138,92 @@ namespace CTCI.UnitTests
 				expectedRunner = expectedRunner.Next;
 			}
 		}
+
+		[Fact]
+		public void Question04Should()
+		{
+			var first = new LinkedList<int>();
+
+			first.AppendToTail(1);
+			first.AppendToTail(2);
+			first.AppendToTail(3);
+
+			var second = new LinkedList<int>();
+
+			second.AppendToTail(1);
+			second.AppendToTail(2);
+			second.AppendToTail(3);
+
+			var expected = new LinkedList<int>();
+
+			expected.AppendToTail(2);
+			expected.AppendToTail(4);
+			expected.AppendToTail(6);
+
+			LinkedList<int> actual = Question04.AddLinkedLists(first, second);
+
+			Assert.Equal(expected.Head.Value, actual.Head.Value);
+			Assert.Equal(expected.Head.Next.Value, actual.Head.Next.Value);
+			Assert.Equal(expected.Head.Next.Next.Value, actual.Head.Next.Next.Value);
+		}
+
+		[Fact]
+		public void Question04ShouldCarry()
+		{
+			var first = new LinkedList<int>();
+
+			first.AppendToTail(6);
+			first.AppendToTail(5);
+			first.AppendToTail(4);
+
+			var second = new LinkedList<int>();
+
+			second.AppendToTail(6);
+			second.AppendToTail(5);
+			second.AppendToTail(4);
+
+			var expected = new LinkedList<int>();
+
+			expected.AppendToTail(2);
+			expected.AppendToTail(1);
+			expected.AppendToTail(9);
+
+			LinkedList<int> actual = Question04.AddLinkedLists(first, second);
+
+			Assert.Equal(expected.Head.Value, actual.Head.Value);
+			Assert.Equal(expected.Head.Next.Value, actual.Head.Next.Value);
+			Assert.Equal(expected.Head.Next.Next.Value, actual.Head.Next.Next.Value);
+		}
+
+		[Fact]
+		public void Question04ShouldAddUnbalancedLists()
+		{
+			var first = new LinkedList<int>();
+
+			first.AppendToTail(6);
+			first.AppendToTail(5);
+			first.AppendToTail(4);
+			first.AppendToTail(3);
+
+			var second = new LinkedList<int>();
+
+			second.AppendToTail(6);
+			second.AppendToTail(5);
+			second.AppendToTail(4);
+
+			var expected = new LinkedList<int>();
+
+			expected.AppendToTail(2);
+			expected.AppendToTail(1);
+			expected.AppendToTail(9);
+			expected.AppendToTail(3);
+
+			LinkedList<int> actual = Question04.AddLinkedLists(first, second);
+
+			Assert.Equal(expected.Head.Value, actual.Head.Value);
+			Assert.Equal(expected.Head.Next.Value, actual.Head.Next.Value);
+			Assert.Equal(expected.Head.Next.Next.Value, actual.Head.Next.Next.Value);
+			Assert.Equal(expected.Head.Next.Next.Next.Value, actual.Head.Next.Next.Next.Value);
+		}
 	}
 }
