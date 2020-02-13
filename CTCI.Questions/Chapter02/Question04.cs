@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CTCI.DataStructures;
-
-namespace CTCI.Questions.Chapter02
+﻿namespace CTCI.Questions.Chapter02
 {
 
 	// You have two numbers represented by a linked list, where each node contains a single 

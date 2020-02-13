@@ -225,5 +225,11 @@ namespace CTCI.UnitTests
 			Assert.Equal(expected.Head.Next.Next.Value, actual.Head.Next.Next.Value);
 			Assert.Equal(expected.Head.Next.Next.Next.Value, actual.Head.Next.Next.Next.Value);
 		}
+
+		[Fact]
+		public void Question05Should()
+		{
+
+		}
 	}
 }
