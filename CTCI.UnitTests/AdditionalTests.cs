@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CTCI.Questions.Additional;
 using Xunit;
 
@@ -46,6 +47,28 @@ namespace CTCI.UnitTests
 			};
 
 			Assert.Equal(expected, merged);
+		}
+
+		[Fact]
+		public void Question02ShouldFindPalindromes()
+		{
+			string input = "Test! aabbaa ccc";
+
+			var expected = new List<string>();
+
+			int expectedSize = 2;
+
+			string expected1 = " aabbaa ";
+			string expected2 = "ccc";
+
+			expected.Add(expected1);
+			expected.Add(expected2);
+
+			List<string> actual = Question02.FindPalindromes(input);
+
+			Assert.Equal(expectedSize, actual.Count);
+			Assert.Contains(expected1, actual);
+			Assert.Contains(expected2, actual);
 		}
 	}
 }
