@@ -2,6 +2,9 @@
 
 namespace CTCI.Questions.Chapter02
 {
+	// Given a circular linked list, implement an algorithm which returns the node at the beginning
+	// of the loop. A circular linked list is a linked list in which a node's next pointer points
+	// to an earlier node, making a loop in the linked list.
 	public class Question05
 	{
 		public static DataStructures.Node<T> GetNodeAtBeginningOfLoop<T>(

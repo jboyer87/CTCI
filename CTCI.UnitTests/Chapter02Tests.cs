@@ -8,7 +8,7 @@ namespace CTCI.UnitTests
 	public class Chapter02Tests
 	{
 		[Fact]
-		public void Question01Should()
+		public void Question01ShouldRemoveDuplicates()
 		{
 			var linkedList = new LinkedList<int>();
 
@@ -40,7 +40,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question01NoBufferShould()
+		public void Question01ShouldRemoveDuplicatesWithNoBuffer()
 		{
 			var linkedList = new LinkedList<int>();
 
@@ -72,7 +72,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question02Should()
+		public void Question02ShouldGetNthToLastElement()
 		{
 			var linkedList = new LinkedList<int>();
 			
@@ -106,7 +106,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question03Should()
+		public void Question03ShouldRemoveNodeFromList()
 		{
 			var actual = new LinkedList<int>();
 
@@ -140,7 +140,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question04Should()
+		public void Question04ShouldAddLinkedLists()
 		{
 			var first = new LinkedList<int>();
 
@@ -168,7 +168,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question04ShouldCarry()
+		public void Question04ShouldAddLinkedListsAndCarry()
 		{
 			var first = new LinkedList<int>();
 

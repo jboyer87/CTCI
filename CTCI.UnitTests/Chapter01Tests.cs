@@ -9,7 +9,7 @@ namespace CTCI.UnitTests
 	public class Chapter01Tests
 	{
 		[Fact]
-		public void Question01Should()
+		public void Question01ShouldFindUniqueCharacters()
 		{
 			Assert.False(Question01.HasUniqueCharacters("aa"));
 			Assert.False(Question01.HasUniqueCharacters2("aa"));
@@ -49,13 +49,13 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question02Should()
+		public void Question02ShouldReverseAString()
 		{
 			Assert.Equal("dcba", Question02.Reverse("abcd"));
 		}
 
 		[Fact]
-		public void Question03Should()
+		public void Question03ShouldRemoveDuplicateCharacters()
 		{
 			string test1 = "abcd";
 			Question03.RemoveDuplicateCharacters(ref test1);
@@ -84,7 +84,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question04Should()
+		public void Question04ShouldFindAnagrams()
 		{
 			Assert.True(Question04.AreAnagrams("aabbccdd", "abbacddc"));
 			Assert.True(Question04.AreAnagrams("abcd", "dcba"));
@@ -103,7 +103,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question05Should()
+		public void Question05ShouldEncodeStrings()
 		{
 			Assert.Equal("this%20is%20now%20encoded!", Question05.EncodeSpaces("this is now encoded!"));
 			Assert.Null(Question05.EncodeSpaces(null));
@@ -111,7 +111,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question07Should()
+		public void Question07ShouldSetRowsToZero()
 		{
 			var matrix = new Matrix(4, 4);
 
@@ -157,7 +157,7 @@ namespace CTCI.UnitTests
 		}
 
 		[Fact]
-		public void Question08Should()
+		public void Question08ShouldFindStringRotations()
 		{
 			string nullTest = null;
 
