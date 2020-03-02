@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using CTCI.Questions.Additional;
 using Xunit;
 
@@ -69,6 +70,30 @@ namespace CTCI.UnitTests
 			Assert.Equal(expectedSize, actual.Count);
 			Assert.Contains(expected1, actual);
 			Assert.Contains(expected2, actual);
+		}
+
+		[Fact]
+		public void Question03ShouldFlattenArray()
+		{
+			int[,] input = new int[3, 2];
+
+			input[0, 0] = 0;
+			input[0, 1] = 1;
+
+			input[1, 0] = 2;
+			input[1, 1] = 3;
+
+			input[2, 0] = 4;
+			input[2, 1] = 5;
+
+			int[] expected = new int[6]
+			{
+				0, 1, 2, 3, 4, 5
+			};
+
+			int[] actual = Question03.FlattenArray<int>(input);
+
+			Assert.True(Enumerable.SequenceEqual(expected, actual));
 		}
 	}
 }
